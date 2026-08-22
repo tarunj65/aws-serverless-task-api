@@ -22,3 +22,8 @@ output "lambda_function_arn" {
   description = "ARN of the Lambda function"
   value       = aws_lambda_function.task_api.arn
 }
+
+output "api_gateway_url" {
+  description = "API Gateway URL"
+  value       = aws_apigatewayv2_stage.default.invoke_url
+}
