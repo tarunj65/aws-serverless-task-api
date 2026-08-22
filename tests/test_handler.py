@@ -213,3 +213,27 @@ def test_unknown_route():
 
     result = handler(event, None)
     assert result["statusCode"] == 404
+
+
+
+def test_http_api_v2_list_tasks(mocker):
+    mocker.patch(
+        "function.handler.get_all_tasks",
+        return_value=[]
+    )
+
+    event = {
+        "version": "2.0",
+        "routeKey": "GET /tasks",
+        "rawPath": "/tasks",
+        "requestContext": {
+            "http": {
+                "method": "GET",
+                "path": "/tasks"
+            }
+        }
+    }
+
+    result = handler(event, None)
+
+    assert result["statusCode"] == 200

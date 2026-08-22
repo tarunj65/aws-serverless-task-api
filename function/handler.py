@@ -33,9 +33,16 @@ def handler(event, context):
     AWS Lambda entry point.
     Handles API Gateway requests for the task API.
     """
-
+    
     method = event.get("httpMethod", "")
     path = event.get("path", "")
+    
+    if not method:
+        request_context = event.get("requestContext", {})
+        http = request_context.get("http", {})
+
+        method = http.get("method", "")
+        path = http.get("path", "")
 
     if method == "GET" and path == "/tasks":
         tasks = get_all_tasks()
