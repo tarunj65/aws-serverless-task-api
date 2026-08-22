@@ -12,3 +12,13 @@ output "lambda_role_arn" {
   description = "IAM role ARN used by the Lambda function"
   value       = aws_iam_role.lambda_role.arn
 }
+
+output "lambda_function_name" {
+  description = "Name of the Lambda function"
+  value       = aws_lambda_function.task_api.function_name
+}
+
+output "lambda_function_arn" {
+  description = "ARN of the Lambda function"
+  value       = aws_lambda_function.task_api.arn
+}

@@ -1,0 +1,1 @@
+{"statusCode": 200, "headers": {"Content-Type": "application/json"}, "body": "{\"description\": \"Test Lambda with DynamoDB\", \"task_id\": \"3d169fbe-8f64-4d54-b98a-e4322c8ff18a\", \"title\": \"Deploy serverless API\", \"status\": \"pending\"}"}
