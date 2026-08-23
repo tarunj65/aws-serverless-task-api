@@ -1,5 +1,0 @@
-{
-	"httpMethod":"POST",
-	"path":"/tasks",
-	"body":"{\"title\":\"Deploy serverless API\",\"description\":\"Test Lambda with DynamoDB\",\"status\":\"pending\"}"
-}

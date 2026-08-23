@@ -30,3 +30,9 @@ crash.*.log
 lambda.zip
 
 terraform-bootstrap/
+
+# Lambda/API testing artifacts
+event.json
+response.json
+event-*.json
+response-*.json
