@@ -50,7 +50,7 @@ def handler(event, context):
         return response(
                 200, {
                         "tasks": tasks,
-                        "source": "Jenkins CI/CD"
+                        "source": "Jenkins CI/CD - Auto Deployment Verified"
                     }
                 )
 
