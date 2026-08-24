@@ -49,7 +49,8 @@ def handler(event, context):
 
         return response(
                 200, {
-                        "tasks": tasks
+                        "tasks": tasks,
+                        "source": "Jenkins CI/CD"
                     }
                 )
 
